@@ -21,6 +21,7 @@
   <header class="bar">
     <a class="mark" href="#top">alpa</a>
     <p class="session"><span class="dot"></span><span id="session-count">4 agents</span> and you in this session</p>
+    <button class="auto" type="button" aria-pressed="false"><span class="auto-icon" aria-hidden="true"></span><span class="auto-label">Auto-scroll</span></button>
     <nav>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
@@ -37,42 +38,42 @@
         <a class="btn btn-solid" href="#work">See the work</a>
         <a class="btn" href="#contact">Start a project</a>
       </div>
-      <p class="hint">Scroll. The agents will follow.</p>
+      <p class="hint">Scroll, or hit auto-scroll. The agents build the rest as you go.</p>
     </section>
 
     <!-- PROCESS: a real sequence, pinned while you scroll -->
     <section class="process" id="process">
       <div class="process-pin">
-        <h2 class="grad-text">How a build runs</h2>
+        <h2 class="grad-text" data-build data-agent="scout" data-say="Laying out the process">How a build runs</h2>
         <ol class="steps">
-          <li data-agent="scout"><b>Scout</b><span>Reads the brief, the codebase and the people. Writes down what done looks like before anything gets built.</span></li>
-          <li data-agent="builder"><b>Build</b><span>Small, working slices. Every slice runs in a real browser before it counts.</span></li>
-          <li data-agent="critic"><b>Critique</b><span>Each slice gets reviewed against the brief. Anything that doesn't serve it gets cut.</span></li>
-          <li data-agent="pilot"><b>Ship</b><span>Deployed, measured, handed over with notes the next person can actually use.</span></li>
+          <li data-build data-agent="scout"><b>Scout</b><span>Reads the brief, the codebase and the people. Writes down what done looks like before anything gets built.</span></li>
+          <li data-build data-agent="builder"><b>Build</b><span>Small, working slices. Every slice runs in a real browser before it counts.</span></li>
+          <li data-build data-agent="critic"><b>Critique</b><span>Each slice gets reviewed against the brief. Anything that doesn't serve it gets cut.</span></li>
+          <li data-build data-agent="pilot"><b>Ship</b><span>Deployed, measured, handed over with notes the next person can actually use.</span></li>
         </ol>
       </div>
     </section>
 
     <!-- WORK -->
     <section class="work" id="work">
-      <h2 class="grad-text">Selected work</h2>
+      <h2 class="grad-text" data-build data-agent="builder" data-say="Pulling in the case studies">Selected work</h2>
       <ul class="projects">
-        <li class="project" tabindex="0" data-note="Shipped in 6 weeks">
+        <li class="project" data-build tabindex="0" data-note="Shipped in 6 weeks">
           <h3>Relay</h3>
           <p class="meta">2026, product design and frontend</p>
           <p>A shared inbox where support agents and an AI triage bot hand tickets back and forth without losing context.</p>
         </li>
-        <li class="project" tabindex="0" data-note="Cut load time by 64%">
+        <li class="project" data-build tabindex="0" data-note="Cut load time by 64%">
           <h3>Fieldnotes</h3>
           <p class="meta">2025, full-stack</p>
           <p>Offline-first note taking for ecologists. Syncs when a signal shows up, transcribes voice memos on device.</p>
         </li>
-        <li class="project" tabindex="0" data-note="3 agents, 1 human, 0 merge conflicts">
+        <li class="project" data-build tabindex="0" data-note="3 agents, 1 human, 0 merge conflicts">
           <h3>Loom Board</h3>
           <p class="meta">2025, design systems</p>
           <p>A multiplayer whiteboard where coding agents claim tasks, show live cursors and leave reviewable trails.</p>
         </li>
-        <li class="project" tabindex="0" data-note="Open source, 2.1k stars">
+        <li class="project" data-build tabindex="0" data-note="Open source, 2.1k stars">
           <h3>Tinted</h3>
           <p class="meta">2024, open source</p>
           <p>A tiny library for perceptual color palettes. The gradients on this page are built with it.</p>
@@ -82,15 +83,15 @@
 
     <!-- STACK -->
     <section class="stack">
-      <h2 class="grad-text">Tools I reach for</h2>
-      <p class="stack-list">TypeScript, React, Svelte, Node, Python, Postgres, Figma, the Claude API, WebGL, and a lot of plain CSS.</p>
+      <h2 class="grad-text" data-build data-agent="critic">Tools I reach for</h2>
+      <p class="stack-list" data-build data-agent="pilot">TypeScript, React, Svelte, Node, Python, Postgres, Figma, the Claude API, WebGL, and a lot of plain CSS.</p>
     </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-      <h2 class="contact-title">Got something to build?</h2>
-      <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
-      <p class="socials">
+      <h2 class="contact-title" data-build data-agent="scout" data-say="Last section">Got something to build?</h2>
+      <a class="contact-link" data-build data-agent="builder" href="mailto:hello@example.com">hello@example.com</a>
+      <p class="socials" data-build data-agent="pilot">
         <a href="https://github.com/">GitHub</a>
         <a href="https://www.linkedin.com/">LinkedIn</a>
         <a href="#top">Back to top</a>
