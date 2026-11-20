@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpa — Portfolio</title>
+  <meta name="description" content="Designer and engineer building interfaces where people and agents work together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient gradient that shifts hue with scroll -->
+  <div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="grid" aria-hidden="true"></div>
+
+  <!-- Agent cursors live here (fixed layer, driven by main.js) -->
+  <div class="agents" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="mark" href="#top">alpa</a>
+    <p class="session"><span class="dot"></span><span id="session-count">4 agents</span> and you in this session</p>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO: the agents type and paint this live -->
+    <section class="hero">
+      <h1 class="hero-title" data-text="Alpa builds software with a crew of agents."><span class="typed"></span><span class="caret"></span></h1>
+      <p class="hero-sub" data-text="Designer and engineer. I ship interfaces where people and AI work side by side, and I use the same workflow to build them."></p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#work">See the work</a>
+        <a class="btn" href="#contact">Start a project</a>
+      </div>
+      <p class="hint">Scroll. The agents will follow.</p>
+    </section>
+
+    <!-- PROCESS: a real sequence, pinned while you scroll -->
+    <section class="process" id="process">
+      <div class="process-pin">
+        <h2 class="grad-text">How a build runs</h2>
+        <ol class="steps">
+          <li data-agent="scout"><b>Scout</b><span>Reads the brief, the codebase and the people. Writes down what done looks like before anything gets built.</span></li>
+          <li data-agent="builder"><b>Build</b><span>Small, working slices. Every slice runs in a real browser before it counts.</span></li>
+          <li data-agent="critic"><b>Critique</b><span>Each slice gets reviewed against the brief. Anything that doesn't serve it gets cut.</span></li>
+          <li data-agent="pilot"><b>Ship</b><span>Deployed, measured, handed over with notes the next person can actually use.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <h2 class="grad-text">Selected work</h2>
+      <ul class="projects">
+        <li class="project" tabindex="0" data-note="Shipped in 6 weeks">
+          <h3>Relay</h3>
+          <p class="meta">2026, product design and frontend</p>
+          <p>A shared inbox where support agents and an AI triage bot hand tickets back and forth without losing context.</p>
+        </li>
+        <li class="project" tabindex="0" data-note="Cut load time by 64%">
+          <h3>Fieldnotes</h3>
+          <p class="meta">2025, full-stack</p>
+          <p>Offline-first note taking for ecologists. Syncs when a signal shows up, transcribes voice memos on device.</p>
+        </li>
+        <li class="project" tabindex="0" data-note="3 agents, 1 human, 0 merge conflicts">
+          <h3>Loom Board</h3>
+          <p class="meta">2025, design systems</p>
+          <p>A multiplayer whiteboard where coding agents claim tasks, show live cursors and leave reviewable trails.</p>
+        </li>
+        <li class="project" tabindex="0" data-note="Open source, 2.1k stars">
+          <h3>Tinted</h3>
+          <p class="meta">2024, open source</p>
+          <p>A tiny library for perceptual color palettes. The gradients on this page are built with it.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- STACK -->
+    <section class="stack">
+      <h2 class="grad-text">Tools I reach for</h2>
+      <p class="stack-list">TypeScript, React, Svelte, Node, Python, Postgres, Figma, the Claude API, WebGL, and a lot of plain CSS.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Got something to build?</h2>
+      <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
+      <p class="socials">
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="#top">Back to top</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
